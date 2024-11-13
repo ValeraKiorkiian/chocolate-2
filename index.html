@@ -26,7 +26,7 @@
           <a href="index.html" class="nav-logo"
             >SIMPLY CHOCOLATE
             <svg class="nav-img" width="24" height="24">
-              <use href="./images/icons.svg#icon-chocolate"></use>
+              <use href="./images/icons.svg#icon-logo"></use>
             </svg>
           </a>
           <ul class="header-nav-list nav-list">
@@ -398,7 +398,16 @@
           </h2>
           <ul class="top-list">
             <li class="top-item">
-              <img src="./images/sellers/img-1.jpg" alt="" class="top-img" />
+              <div class="top-overlay">
+                <img src="./images/sellers/img-1.jpg" alt="" class="top-img" />
+                <p class="top-overlay-text">
+                  Chocolate with nuts is a delectable combination that brings
+                  together the smoothness of chocolate and the crunchiness of
+                  nuts. Whether it's milk chocolate, dark chocolate, or white
+                  chocolate, the addition of nuts adds a whole new dimension of
+                  flavor and texture.
+                </p>
+              </div>
               <div class="top-subtitle-border">
                 <h3 class="top-subtitle section-subtitle">
                   CHOCOLATE WITH NUTS
@@ -406,7 +415,15 @@
               </div>
             </li>
             <li class="top-item">
-              <img src="./images/sellers/img-2.jpg" alt="" class="top-img" />
+              <div class="top-overlay">
+                <img src="./images/sellers/img-2.jpg" alt="" class="top-img" />
+                <p class="top-overlay-text">
+                  Chocolate with fruit is an unbeatable combination of two of
+                  the tastiest things in the world. This dessert combines
+                  delicate and aromatic chocolate with fresh and juicy fruits,
+                  creating a true poetry of taste.
+                </p>
+              </div>
               <div class="top-subtitle-border">
                 <h3 class="top-subtitle section-subtitle">
                   CHOCOLATE WITH FRUITS
@@ -414,7 +431,16 @@
               </div>
             </li>
             <li class="top-item">
-              <img src="./images/sellers/img-3.jpg" alt="" class="top-img" />
+              <div class="top-overlay">
+                <img src="./images/sellers/img-3.jpg" alt="" class="top-img" />
+                <p class="top-overlay-text">
+                  Dark chocolate is a rich and indulgent treat that is beloved
+                  by many chocolate enthusiasts. It is made from cocoa beans,
+                  which are roasted, ground, and then processed to produce
+                  chocolate liquor. Dark chocolate contains a higher percentage
+                  of cocoa solids compared to milk chocolate.
+                </p>
+              </div>
               <div class="top-subtitle-border">
                 <h3 class="top-subtitle section-subtitle">DARK CHOCOLATE</h3>
               </div>
@@ -543,5 +569,91 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <button class="modal-btn" type="button">
+          <svg class="modal-btn-img" width="28" height="28">
+            <use href="./images/icons.svg#icon-user"></use>
+          </svg>
+        </button>
+        <p class="modal-text">
+          LEAVE A REVIEW ABOUT <span class="title-col">OUR CHOCOLATE</span>
+        </p>
+        <form class="modal-form">
+          <div class="modal-wrapper">
+            <label class="modal-form-lbl" for="user-name">Name</label>
+            <div class="modal-input-container">
+              <input
+                class="modal-form-input"
+                id="user-name"
+                type="text"
+                name="user-name"
+              />
+              <svg class="input-img" width="24" height="24">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-wrapper">
+            <label class="modal-form-lbl" for="user-email">Email</label>
+            <div class="modal-input-container">
+              <input
+                class="modal-form-input"
+                id="user-email"
+                type="email"
+                name="user-email"
+              />
+              <svg class="input-img" width="24" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-wrapper">
+            <label class="modal-form-lbl" for="user-tel">Phone number</label>
+            <div class="modal-input-container">
+              <input
+                class="modal-form-input"
+                id="user-tel"
+                type="tel"
+                name="user-tel"
+              />
+              <svg class="input-img" width="24" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-wrapper">
+            <label class="modal-form-lbl" for="user-comment">Comment</label>
+            <textarea
+              class="modal-form-input textarea"
+              id="user-comment"
+              type="text"
+              name="user-comment"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+          <div class="modal-checkbox">
+            <input
+              class="vissually-hidden"
+              id="user-privacy"
+              type="checkbox"
+              name="user-privacy"
+            />
+            <label for="user-privacy" class="modal-privacy"
+              ><span class="user-checkbox">
+                <svg width="10" height="10">
+                  <use href="./images/icons.svg#icon-checkmark"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="#" class="modal-privacy-link">Privacy Policy</a>
+            </label>
+          </div>
+          <button type="submit" class="form-btn btn">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

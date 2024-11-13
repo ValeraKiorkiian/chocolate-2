@@ -80,7 +80,9 @@ img {
 .reviews {
   padding: 60px 0;
 }
-
+.vissually-hidden {
+  display: none;
+}
 /* #endregion */
 
 /* #region Buttons */
@@ -495,6 +497,35 @@ img {
   flex-basis: calc((100% - 2 * 16px) / 3);
   text-align: center;
 }
+.top-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.top-overlay:hover .top-overlay-text {
+  transform: translateY(0);
+  background-color: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  backdrop-filter: blur(15px);
+}
+.top-overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translatey(100%);
+  transition: transform 300ms ease-in-out, background-color 300ms ease-in-out,
+    background-filter 300ms ease-in-out;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: #fff;
+  padding: 178px 40px;
+  border-radius: 15px 15px 0 0;
+}
 .top-img {
 }
 .top-subtitle-border {
@@ -566,6 +597,7 @@ img {
 }
 
 /* #endregion */
+
 /* #region Footer  */
 .footer {
   background: rgb(30, 24, 35);
@@ -670,4 +702,152 @@ img {
 }
 .btn {
 }
+/* #endregion */
+
+/* #region Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(46, 47, 66, 0.4);
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal {
+  position: absolute;
+  padding: 40px;
+  border-radius: 15px;
+  background: rgb(250, 250, 250);
+  width: 517px;
+  /* min-height: 794px; */
+  overflow-y: auto;
+}
+.modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  fill: #111;
+}
+.modal-btn-img {
+}
+.modal-text {
+  margin-bottom: 40px;
+  width: 298px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.title-col {
+}
+.modal-form {
+}
+.modal-wrapper {
+  margin-bottom: 18px;
+}
+.modal-form-lbl {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #4040404d;
+}
+.modal-input-container {
+  position: relative;
+}
+.modal-form-input {
+  padding-left: 62px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  width: 100%;
+  height: 68px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 13px;
+  box-shadow: 0px 5.44px 5.44px 0px rgba(0, 0, 0, 0.03);
+  outline: transparent;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus {
+  border: 1.5px solid rgb(253, 146, 34);
+}
+
+.textarea {
+  height: 137px;
+  resize: none;
+  padding: 22px 24px 93px 24px;
+}
+.textarea::placeholder {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.input-img {
+  position: absolute;
+  left: 24px;
+  top: 22px;
+  fill: #111;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus + .input-img {
+  fill: #fd9222;
+}
+.modal-checkbox {
+  margin-bottom: 41.5px;
+}
+.modal-privacy {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
+}
+.user-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  border-radius: 6px;
+  margin-right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-privacy-link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fd9222;
+}
+#user-privacy:checked + .modal-privacy > .user-checkbox {
+  background-color: #fd9222;
+  border: none;
+  fill: #fff;
+}
+.form-btn {
+  border-radius: 100px;
+  background: rgb(253, 146, 34);
+  color: #fff;
+}
+
 /* #endregion */
